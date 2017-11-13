@@ -1,0 +1,132 @@
+<!DOCTYPE form-validation PUBLIC 
+"-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" 
+"http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+
+<form-validation>
+
+	<formset>
+
+		<form name="loginForm">
+			<field property="j_username" depends="required">
+				<arg0 key="appli.username" />
+			</field>
+		</form>
+
+		<form name="userForm">
+			<field property="login" depends="required,minlength">
+				<arg0 key="livre.inscription.login" />
+				<arg1 name="minlength" key="${var:minlength}"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+			</field>
+			<field property="password" depends="required,minlength">
+				<arg0 key="livre.inscription.password" />
+				<arg1 name="minlength" key="${var:minlength}"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+			</field>
+			<field property="password2" depends="required,minlength">
+				<arg0 key="livre.inscription.password2" />
+				<arg1 name="minlength" key="${var:minlength}"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+			</field>
+			<field property="nom" depends="required">
+				<arg0 key="livre.inscription.name" />
+			</field>
+			<field property="prenom" depends="required">
+				<arg0 key="livre.inscription.prenom" />
+			</field>
+			<field property="adresse" depends="required,maxlength">
+				<arg0 key="livre.inscription.adresse" />
+				<arg1 name="maxlength" key="${var:maxlength}"
+					resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>200</var-value>
+				</var>
+			</field>
+			<field property="mail" depends="required,email">
+				<arg0 key="livre.inscription.mail" />
+			</field>
+
+			<field property="role" depends="required">
+				<arg0 key="livre.inscription.role" />
+			</field>
+		</form>
+
+		<form name="consultationUserForm">
+			<field property="idUser" depends="required,integer">
+				<arg0 key="livre.user.iduser" />
+			</field>
+		</form>
+
+		<form name="modificationUserForm">
+			<field property="idUser" depends="required,integer">
+				<arg0 key="livre.user.iduser" />
+			</field>
+
+			<field property="login" depends="required,minlength">
+				<arg0 key="livre.inscription.login" />
+				<arg1 name="minlength" key="${var:minlength}"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+			</field>
+			<field property="password" depends="required,minlength">
+				<arg0 key="livre.inscription.password" />
+				<arg1 name="minlength" key="${var:minlength}"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+			</field>
+			<field property="password2" depends="required,minlength">
+				<arg0 key="livre.inscription.password2" />
+				<arg1 name="minlength" key="${var:minlength}"
+					resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+			</field>
+			<field property="nom" depends="required">
+				<arg0 key="livre.inscription.name" />
+			</field>
+			<field property="prenom" depends="required">
+				<arg0 key="livre.inscription.prenom" />
+			</field>
+			<field property="adresse" depends="required,maxlength">
+				<arg0 key="livre.inscription.adresse" />
+				<arg1 name="maxlength" key="${var:maxlength}"
+					resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>200</var-value>
+				</var>
+			</field>
+			<field property="mail" depends="required,email">
+				<arg0 key="livre.inscription.mail" />
+			</field>
+
+			<field property="role" depends="required">
+				<arg0 key="livre.inscription.role" />
+			</field>
+		</form>
+
+
+	</formset>
+
+</form-validation>

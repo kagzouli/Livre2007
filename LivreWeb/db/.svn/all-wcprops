@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/depotsvn/Livre_web/!svn/ver/3/db
+END
+livredb.xml
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/depotsvn/Livre_web/!svn/ver/1/db/livredb.xml
+END
+script.sql
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/depotsvn/Livre_web/!svn/ver/3/db/script.sql
+END

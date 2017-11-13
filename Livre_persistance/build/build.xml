@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Export Livre_persistance" default="Export" basedir=".">
+	<target name="Export" 
+			description="Delivery of Livre_persistance">
+
+		<echo>DEBUT: generation de /Livre_web/WebContent/WEB-INF/lib/livre_persistance.jar</echo>	
+		<jar jarfile="${basedir}/../../Livre_web/WebContent/WEB-INF/lib/livre_persistance.jar" >
+			<fileset dir="${basedir}/../bin" >
+				<exclude name="**/fwk.xml"/>
+			</fileset>	    
+		</jar>
+		<echo>FIN: generation de /Livre_web/WebContent/WEB-INF/lib/livre_persistance.jar</echo>	
+	</target>
+</project>

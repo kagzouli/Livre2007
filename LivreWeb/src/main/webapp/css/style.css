@@ -1,0 +1,139 @@
+body {
+	background-image: url(../images/back.gif);
+}
+
+table.tablelogin {
+	margin-right: 200px;
+	margin-left: 370px;
+	margin-top: 70 px;
+	border: thin;
+}
+
+span.titre {
+	color: 0000FF;
+	font-family: Arial;
+	font-size: 18pt;
+	font-style: italic;
+	margin-left: 430px;
+}
+
+.styleButton {
+	color: yellow;
+	background-color: blue;
+}
+
+span.labelfield {
+	color: 0000FF;
+	font-family: Arial;
+	font-size: 11pt;
+}
+
+div.messageerreur {
+	color: red;
+	margin-left: 390px;
+}
+
+div.messageadmin {
+	color: red;
+	margin-left: 100px;
+}
+
+span.mandatory {
+	color: red;
+}
+
+td.tdmessagelogin {
+	
+}
+
+span.inscription {
+	margin-left: 440px;
+}
+
+div.messageinfo {
+	color: red;
+	margin-left: 320px;
+}
+
+div.messagesupp {
+	color: red;
+}
+
+
+div.messageinfoadmin {
+	color: red;
+	margin-left: 50px;
+}
+
+table.tablerecherche {
+	border-top-color: #0000FF;
+	border-top-style: solid;
+	border-top-width: 1 px;
+	border-left-color: #0000FF;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #0000FF;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-bottom-color: #0000FF;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+}
+
+table.interieurtablerecherche {
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+div.lieninscription {
+	margin-left: 445px;
+}
+
+td.recherchecritere {
+	margin-left: 600px;
+}
+
+span.entete {
+	color: 0000FF;
+	font-family: Arial;
+	font-size: 20pt;
+	font-style: italic;
+	margin-left: 480px;
+}
+
+span.presentationadmin {
+	color: 000000;
+	font-family: Arial;
+}
+
+td.enteteTab {
+	font-family: Arial;
+	font-size: 12px;
+	color: #000000;
+	background-color: #0099CC;
+	height: 22;
+	font-weight: bold;
+	cursor: hand
+}
+
+th.contenuTab {
+	font-family: Arial;
+	font-size: 12px;
+	color: #000000;
+	background-color: #0099CC;
+	height: 22;
+	font-weight: bold;
+	cursor: hand;
+	width: 210px
+	
+}
+
+td.contenuTab {
+	font-family: Arial;
+	font-size: 12px;
+	color: #000000;
+	background-color: #33CCCC;
+	width: 210px;
+	height: 22;
+	cursor: han
+}

@@ -1,0 +1,8 @@
+<Context path="/BanqueWebTaSpHi" docBase="BanqueWebTaSpHi" crossContext="true" antiJARLocking="true"> 
+
+            <Resource name="jdbc/LivreDB" auth="Container" type="javax.sql.DataSource" 
+                          maxActive="7" maxIdle="-1" maxWait="10000" 
+                          username="livre" password="password" 
+                          driverClassName="com.mysql.jdbc.Driver" 
+                          url="jdbc:mysql://localhost:3306/livreweb" />                   
+</Context> 

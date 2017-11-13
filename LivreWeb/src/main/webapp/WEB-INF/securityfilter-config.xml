@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE securityfilter-config PUBLIC
+    "-//SecurityFilter.org//DTD Security Filter Configuration 1.1//EN"
+    "http://www.securityfilter.org/dtd/securityfilter-config_1_1.dtd">
+
+<securityfilter-config>
+	
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Gestion administrateur/user</web-resource-name>
+			<description>Page administrateur/user sécurisé</description>
+			<url-pattern>/common/*</url-pattern>
+			<http-method>HEAD</http-method>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>root</role-name>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Gestion administrateur</web-resource-name>
+			<description>Page administrateur sécurisé</description>
+			<url-pattern>/admin/*</url-pattern>
+			<http-method>HEAD</http-method>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>root</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Gestion utilisateur</web-resource-name>
+			<description>Page utilisateur sécurisé</description>
+			<url-pattern>/user/*</url-pattern>
+			<http-method>HEAD</http-method>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Page accueil</web-resource-name>
+			<description>Page accueil sécurisé</description>
+			<url-pattern>/jsp/index.jsp</url-pattern>
+			<http-method>HEAD</http-method>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>root</role-name>
+			<role-name>user</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Gestion administrateur</web-resource-name>
+			<description>Page administrateur sécurisé</description>
+			<url-pattern>/jsp/admin/*</url-pattern>
+			<http-method>HEAD</http-method>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Gestion utilisateur</web-resource-name>
+			<description>Page utilisateur sécurisé</description>
+			<url-pattern>/jsp/user/*</url-pattern>
+			<http-method>HEAD</http-method>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+		</auth-constraint>
+	</security-constraint>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Gestion utilisateur</web-resource-name>
+			<description>Page utilisateur sécurisé</description>
+			<url-pattern>/jsp/common/*</url-pattern>
+			<http-method>HEAD</http-method>
+			<http-method>GET</http-method>
+			<http-method>POST</http-method>
+			<http-method>PUT</http-method>
+			<http-method>DELETE</http-method>
+		</web-resource-collection>
+		<auth-constraint>
+		</auth-constraint>
+	</security-constraint>
+
+	<!--  Definition d'authentification -->
+	<login-config>
+		<auth-method>FORM</auth-method>
+		<form-login-config>
+			<form-login-page>/jsp/login/login.jsp</form-login-page>
+			<form-error-page>/jsp/login/login.jsp?message=echec</form-error-page>
+		</form-login-config>
+	</login-config>
+	
+	
+	<!--  Definition des roles -->
+	<security-role>
+	<description>Administrateur</description>
+		<role-name>root</role-name>
+	</security-role>
+
+	<security-role>
+	<description>Utilisateur</description>
+		<role-name>user</role-name>
+	</security-role>
+	
+		
+	<realm className="com.livre.security.LivreSecurityRealm" />
+	
+</securityfilter-config>

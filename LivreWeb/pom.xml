@@ -1,0 +1,161 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0   
+       http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>LivreWeb</artifactId>
+	<packaging>war</packaging>
+	<name>LivreWeb</name>
+	<parent>
+		<groupId>com.exakaconsulting.poc</groupId>
+		<artifactId>Livre2007</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+    <dependencies>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-digester</groupId>
+			<artifactId>commons-digester</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>oro</groupId>
+			<artifactId>oro</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.exakaconsulting.poc</groupId>
+			<artifactId>Livre_service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.exakaconsulting.poc</groupId>
+			<artifactId>Livre_persistance</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		
+				
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts-el</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts-legacy</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>struts-menu</groupId>
+			<artifactId>struts-menu</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>struts</groupId>
+			<artifactId>struts-layout</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+		</dependency>		
+		
+		<dependency>
+			<groupId>xalan</groupId>
+			<artifactId>xalan</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.eclipse.persistence</groupId>
+			<artifactId>javax.persistence</artifactId>
+		</dependency>
+		
+		<dependency>
+ 			 <groupId>securityfilter</groupId>
+  		 	<artifactId>securityfilter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		
+		
+		
+		
+		
+		
+		
+
+    </dependencies>
+    
+	<build>	
+		<plugins>
+		</plugins>
+	</build>
+
+
+
+
+
+
+
+</project>

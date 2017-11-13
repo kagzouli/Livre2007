@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://tiles.apache.org/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+  <!--  Tiles generales. -->
+  <definition name="layout" path="/jsp/common/modele.jsp">
+    <put name="entete" value="/jsp/common/entete.jsp" />
+    <put name="menu" value="/jsp/common/menu.jsp" />
+    <put name="body" />
+  </definition>
+  
+  <definition name="admin.pageaccueil" extends="layout">
+    <put name="body" value="/jsp/admin/pageaccueil.jsp" />
+  </definition>
+ 
+  <definition name="admin.gestionuser" extends="layout">
+    <put name="body" value="/jsp/user/user.jsp" />
+  </definition>
+ 
+  <definition name="admin.confirmcreationuser" extends="layout">
+    <put name="body" value="/jsp/user/confirmcreateuser.jsp" />
+  </definition>
+  
+  <definition name="admin.rechercheuser" extends="layout">
+    <put name="body" value="/jsp/user/rechercheuser.jsp" />
+  </definition>
+  
+  <definition name="admin.consulteruser" extends="layout">
+    <put name="body" value="/jsp/user/consultationuser.jsp" />
+  </definition>
+ 
+  <definition name="admin.modifieruser" extends="layout">
+    <put name="body" value="/jsp/user/modificationuser.jsp" />
+  </definition>
+
+  <definition name="admin.confirmmodifieruser" extends="layout">
+    <put name="body" value="/jsp/user/confirmmodificationuser.jsp" />
+  </definition>
+  
+  <definition name="admin.confirmsuppressionuser" extends="layout">
+    <put name="body" value="/jsp/user/confirmsuppressionuser.jsp" />
+  </definition>
+  
+
+</tiles-definitions>
+  
+  

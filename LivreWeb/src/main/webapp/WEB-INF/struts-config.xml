@@ -1,0 +1,188 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+
+	<data-sources></data-sources>
+
+	<form-beans>
+		<form-bean name="loginForm" type="fr.livre.login.LoginForm" />
+		<form-bean name="userForm" type="fr.livre.user.UserForm" />
+		<form-bean name="forwardForm"
+			type="fr.livre.forward.ForwardForm" />
+		<form-bean name="critereForm" type="fr.livre.user.CritereForm" />
+		<form-bean name="consultationUserForm"
+			type="fr.livre.user.ConsultationUserForm" />
+		<form-bean name="modificationUserForm"
+			type="fr.livre.user.ModificationUserForm" />
+
+
+	</form-beans>
+
+	<!-- ============= GLOBAL FORWARD DEFINITION =========== -->
+	<global-forwards>
+
+		<forward name="connect" path="/login/InitLoginAction.do"
+			redirect="false" />
+		<forward name="/common/forwardRoleAction"
+			path="/common/forwardRoleAction.do" redirect="false" />
+
+
+	</global-forwards>
+
+
+
+	<action-mappings>
+
+		<!-- ========= GERE LE TRI -->
+		<action path="/sort"
+			type="fr.improve.struts.taglib.layout.sort.SortAction"
+			scope="request" validate="false">
+		</action>
+
+		<action path="/treeview"
+			type="fr.improve.struts.taglib.layout.treeview.TreeviewAction"
+			scope="request" validate="false">
+		</action>
+
+
+
+		<!-- ========= GERE LE LOGIN -->
+		<action path="/login/InitLoginAction"
+			type="fr.livre.login.InitLoginAction"
+			validate="false" scope="request" name="loginForm">
+			<forward name="success" path="/jsp/login/login.jsp"
+				redirect="no" />
+		</action>
+
+		<!-- =========== INSCRIPTION -->
+		<action path="/inscription/InitInscriptionAction"
+			type="fr.livre.user.InitInscriptionAction"
+			validate="false" scope="request" name="userForm">
+			<forward name="success" path="/jsp/user/inscription.jsp"
+				redirect="no" />
+		</action>
+
+		<action path="/inscription/TraitementInscriptionAction"
+			type="fr.livre.user.TraitementInscriptionAction"
+			validate="true" input="/jsp/user/inscription.jsp" scope="request"
+			name="userForm">
+			<forward name="success"
+				path="/jsp/user/confirminscription.jsp" redirect="no" />
+		</action>
+
+		<!-- =========== FORWARDROLE -->
+		<action path="/common/forwardRoleAction"
+			type="fr.livre.forward.ForwardRoleAction"
+			validate="false" scope="request" name="forwardForm">
+			<forward name="root" path="admin.pageaccueil" redirect="no" />
+			<forward name="user" path="/jsp/user/pageaccueil.jsp"
+				redirect="no" />
+			<forward name="echec" path="/jsp/erreur/echec.jsp"
+				redirect="no" />
+		</action>
+
+		<!--  ============ PARTIE GESTION USER -->
+		<action path="/admin/InitCreationUserAction"
+			type="fr.livre.user.InitCreationUserAction"
+			validate="false" scope="request" name="userForm">
+			<forward name="success" path="admin.gestionuser"
+				redirect="no" />
+		</action>
+
+		<action path="/admin/TraitementCreationUserAction"
+			type="fr.livre.user.TraitementCreationUserAction"
+			validate="true" input="admin.gestionuser" scope="request"
+			name="userForm">
+			<forward name="success" path="admin.confirmcreationuser"
+				redirect="no" />
+		</action>
+
+		<action path="/admin/InitRechercheUserAction"
+			type="fr.livre.user.InitRechercheUserAction"
+			validate="false" scope="request" name="critereForm">
+			<forward name="success" path="admin.rechercheuser"
+				redirect="no" />
+		</action>
+
+		<action path="/admin/TraitementRechercheUserAction"
+			type="fr.livre.user.TraitementRechercheUserAction"
+			validate="true" input="admin.rechercheuser" scope="request"
+			name="critereForm">
+			<forward name="success" path="admin.rechercheuser"
+				redirect="no" />
+			<forward name="recherche" path="admin.rechercheuser"
+				redirect="no" />
+
+		</action>
+
+		<action path="/admin/InitConsultationUserAction"
+			type="fr.livre.user.InitConsultationUserAction"
+			validate="true" scope="request" name="consultationUserForm"
+			input="admin.rechercheuser">
+			<forward name="success" path="admin.consulteruser"
+				redirect="no" />
+			<forward name="recherche" path="admin.rechercheuser"
+				redirect="no" />
+		</action>
+
+		<action path="/admin/InitModificationUserAction"
+			type="fr.livre.user.InitModificationUserAction"
+			validate="false" scope="request" name="modificationUserForm">
+			<forward name="success" path="admin.modifieruser"
+				redirect="no" />
+		</action>
+
+
+		<action path="/admin/TraitementModificationUserAction"
+			type="fr.livre.user.TraitementModificationUserAction"
+			validate="true" scope="request" name="modificationUserForm"
+			input="admin.modifieruser">
+			<forward name="success"
+				path="/admin/InitConsultationUserAction.do" redirect="no" />
+		</action>
+
+		<action path="/admin/TraitementSuppressionUserAction"
+			type="fr.livre.user.TraitementSuppressionUserAction"
+			validate="true" scope="request" name="consultationUserForm"
+			input="admin.consulteruser">
+			<forward name="success" path="admin.confirmsuppressionuser"
+				redirect="no" />
+		</action>
+
+		<action path="/Logout"
+			type="fr.livre.common.LogoutAction"
+			validate="false" scope="request">
+			<forward name="success" path="/jsp/login/login.jsp"
+				redirect="no" />
+		</action>
+
+
+
+	</action-mappings>
+
+	<!-- ========== Controller Configuration ================================ -->
+	<controller
+		processorClass="fr.improve.struts.taglib.layout.workflow.LayoutRequestProcessor" />
+
+	<!-- ========== Message Resources Definitions ============================ -->
+
+	<!-- ========== Plug Ins Configuration ================================= -->
+	<message-resources parameter="ApplicationRessources" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation.xml,/WEB-INF/validator-rules.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/tiles-defs.xml" />
+	</plug-in>
+
+
+	<plug-in
+		className="fr.improve.struts.taglib.layout.workflow.LayoutPlugin" />
+
+
+
+
+
+</struts-config>
