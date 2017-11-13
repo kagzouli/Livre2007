@@ -27,7 +27,7 @@
 	   <strutsmenu.version>2.4.3</strutsmenu.version>
 	   <commons-beanutils.version>1.9.3</commons-beanutils.version>
 	   <commons-digester.version>2.1</commons-digester.version>
-	   <commonsvalid.version>1.1.1</commonsvalid.version>
+	   <commonsvalid.version>1.1.4</commonsvalid.version>
 	   <oro.version>2.0.8</oro.version>
 	   <jstl.version>1.2</jstl.version>
 	   <xalan.version>2.7.2</xalan.version>
@@ -36,7 +36,7 @@
 
 		
 		
-		<jpa.scope>compile</jpa.scope>
+	   <jpa.scope>compile</jpa.scope>
 	   <xalan.scope>compile</xalan.scope>
 	   <jta.scope>compile</jta.scope>
 
@@ -335,6 +335,7 @@
 			<properties>
 				<jpa.scope>compile</jpa.scope>
 				<jta.scope>compile</jta.scope>
+			    <xalan.scope>compile</xalan.scope>
 			</properties>
 		</profile>
 		<profile>
@@ -342,6 +343,8 @@
 			<properties>
 				<jpa.scope>provided</jpa.scope>
 				<jta.scope>provided</jta.scope>	
+				<xalan.scope>provided</xalan.scope>
+
 			</properties>
 		</profile>
 	</profiles>
